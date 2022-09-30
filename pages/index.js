@@ -13,8 +13,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Ali Mengütay's <br/>
-           personal website!!
+          Ali Mengütay s<br/>
+          personal website!!
         </h1>
 
         <p className={styles.description}>

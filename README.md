@@ -9,6 +9,7 @@ npm run dev
 # or
 yarn dev
 ```
+- Use `build` comment to deploy website
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
