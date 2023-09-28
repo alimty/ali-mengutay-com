@@ -1,33 +1,42 @@
+import React, { useState } from 'react';
 import Link from 'next/link';
 
-
 const Navbar = () => {
-  console.log("Navbar rendering");  // Add this line
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNav = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-dark text-white">
-      <ul className="flex justify-around">
-        <li>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/blog">
-            <a>Blog</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/project">
-            <a>Project</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/shop">
-            <a>Shop</a>
-          </Link>
-        </li>
-      </ul>
+    <nav className="navbar">
+      <div className="navbar-brand">
+        <button
+          style={{
+            fontSize: '30px',
+            display: 'inline-block',
+            cursor: 'pointer'
+          }}
+          onClick={toggleNav}
+        >
+          &#9776; {/* Unicode for hamburger icon */}
+        </button>
+      </div>
+
+      <div style={{ display: isOpen ? 'block' : 'none' }}>
+        <ul>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link href="/project">Project</Link>
+          </li>
+          <li>
+            <Link href="/shop">Shop</Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };

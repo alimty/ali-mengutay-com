@@ -1,23 +1,25 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import sanityClient from '@sanity/client';
+// import sanityClient from '@sanity/client';
 
-const client = sanityClient({
-  projectId: 'your_project_id',
-  dataset: 'your_dataset',
-});
+// Comment out the Sanity client initialization
+// const client = sanityClient({
+//   projectId: 'your_project_id',
+//   dataset: 'your_dataset',
+// });
 
 const MyCarousel: React.FC = () => {
   const [images, setImages] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchImages = async () => {
-      const data = await client.fetch('*[_type == "imageType"]');
-      setImages(data);
-    };
+    // Comment out the fetch from Sanity
+    // const fetchImages = async () => {
+    //   const data = await client.fetch('*[_type == "imageType"]');
+    //   setImages(data);
+    // };
 
-    fetchImages();
+    // fetchImages();
   }, []);
 
   return (
