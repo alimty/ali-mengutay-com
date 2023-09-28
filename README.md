@@ -1,35 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 🌟 My Personal Website 🌟
 
-First, run the development server:
+## 📚 Overview
 
+This is a personal website project built using Next.js and other cutting-edge web technologies.
+
+## 💻 Technologies Used
+
+- 📘 Next.js
+- 🛠 TypeScript
+- 🎨 Tailwind CSS
+- 💌 Nodemailer
+- 🗃 Sanity CMS
+- 🎠 React Responsive Carousel
+
+## 🚀 Setup and Development
+
+### 🔧 Prerequisites
+
+Make sure you have Node.js and npm installed on your local machine.
+
+### 📥 Installation
+
+1️⃣ Clone the repository to your local machine.
+```bash
+git clone <repository_url>
+```
+
+2️⃣ Navigate to the project directory.
+```bash
+cd <project_directory>
+```
+
+3️⃣ Install the dependencies.
+```bash
+npm install
+```
+
+### 🛠 Running the Development Server
+
+1️⃣ Run the following command to start the development server.
 ```bash
 npm run dev
-# or
-yarn dev
 ```
-- Use `build` comment to deploy website
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2️⃣ Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 🌐 API Routes
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as API routes rather than React pages. You can edit the API endpoints in the `pages/api` directory.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 🚢 Deployment
 
-## Learn More
+To deploy the application, run the following build command.
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🌐 Vercel Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-## Deploy on Vercel
+For more detailed deployment instructions, check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📚 Additional Resources
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js Documentation](https://nextjs.org/docs) - Comprehensive guide on Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - An interactive tutorial on Next.js.
