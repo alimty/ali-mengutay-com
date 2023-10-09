@@ -1,12 +1,11 @@
 
 import Navbar from '../components/Navbar';
-import '../styles/globals.css';
+import '../styles/globals.css'
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
-      {/* Your Navbar and other components here */}
       <Navbar />
       <Component {...pageProps} />
     </div>
@@ -14,3 +13,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 
 export default MyApp;
+
+
+
