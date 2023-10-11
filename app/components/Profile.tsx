@@ -1,3 +1,4 @@
+"use client"; // This is a client component
 import React from 'react';
 import Image from 'next/image';
 import TypingGreeting from './TypingGreeting';

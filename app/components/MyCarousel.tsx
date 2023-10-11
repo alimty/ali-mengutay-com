@@ -1,3 +1,4 @@
+"use client"; // This is a client component
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
