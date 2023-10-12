@@ -3,11 +3,12 @@ import React from 'react';
 import Image from 'next/image';
 import TypingGreeting from './TypingGreeting';
 
+
 const Profile: React.FC = () => {
   return (
     <div className="border rounded-lg p-4 mb-8 bg-gray-700">
       <Image
-        src="https://source.unsplash.com/featured/?men"
+        src="/images/me-avatar.jpeg" 
         alt="Random Men Image"
         width={500}
         height={500}
