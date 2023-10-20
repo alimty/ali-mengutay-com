@@ -1,10 +1,11 @@
+"use client"; // This is a client component
 import React, { useState, useEffect } from 'react';
-
 const TypingGreeting: React.FC = () => {
   const [text, setText] = useState('');
   const message = 'Hello, there...';
 
   useEffect(() => {
+    console.log("useEffect started");
     let currentText = '';
     let index = 0;
     const timer = setInterval(() => {
