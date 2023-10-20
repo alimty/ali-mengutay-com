@@ -6,7 +6,7 @@ import TypingGreeting from './TypingGreeting';
 
 const Profile: React.FC = () => {
   return (
-    <div className="border rounded-lg p-4 mb-8 bg-gray-700">
+    <div className="border rounded-lg p-4 mb-8 bg-gray-700 ">
       <Image
         src="/images/me-avatar.jpeg" 
         alt="Random Men Image"
