@@ -5,7 +5,6 @@ const TypingGreeting: React.FC = () => {
   const message = 'Hello, there...';
 
   useEffect(() => {
-    console.log("useEffect started");
     let currentText = '';
     let index = 0;
     const timer = setInterval(() => {
