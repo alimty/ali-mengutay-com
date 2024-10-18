@@ -1,31 +1,31 @@
 import React from 'react';
 
-interface CardParams{
+interface CardParams {
   size: "s" | "m" | "l" | "xl"
   title: string
   subtitle: string
-  onclick: ()=> void
+  onclick: () => void
   icon: any
 
 }
 
 
 
-export default function Card({size, title, subtitle, onclick, icon}:CardParams) {
+export default function Card({ size, title, subtitle, onclick, icon }: CardParams) {
 
   let sizeClasses = {
-    s:'col-span-1 row-span-1',
-    m:'col-span-1 row-span-2',
-    l: 'col-span-2 row-span-3',
-    xl:'col-span-2 row-span-4'
-  
+    s: 'col-span-1 row-span-1',
+    m: 'col-span-2 row-span-1',
+    l: 'col-span-3 row-span-1',
+    xl: 'col-span-4 row-span-1'
+
   };
 
 
   return (
-    <div className={`bg-gray-700 bg-opacity-50 p-6 rounded-lg flex flex-col justify-between ${sizeClasses[size]}`}>
-      <div className="flex items-center space-x-4">
-        <div className="text-4xl">
+    <div className={`bg-neutral-700 shadow-md rounded-x1 ${sizeClasses[size]}`}>
+      <div className="">
+        <div className="">
           {icon}
         </div>
         <div>
@@ -43,5 +43,5 @@ export default function Card({size, title, subtitle, onclick, icon}:CardParams) 
       </div>
     </div>
   );
-  
+
 }

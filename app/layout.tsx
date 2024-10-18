@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <meta name="description" content={metadata.description} />
         {/* Add any additional meta tags or links here */}
       </Head>
-      <body>
+      <body className='bg-stone-900 opacity-80'>
         {children}
       </body>
     </html>
