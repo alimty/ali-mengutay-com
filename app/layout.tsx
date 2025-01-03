@@ -1,27 +1,20 @@
-// First, import your global styles and necessary types
-import './globals.css'
-import React from 'react';
-import Head from 'next/head';
-// Metadata for your application (this can be extended or changed based on your needs)
-const metadata = {
-  title: 'Ali Mengütay',
-  description: 'Description for your app',
-}
+import "./globals.css";
+import type { Metadata } from "next";
 
-// Layout component
-export default function Layout({ children }: { children: React.ReactNode }) {
+export const metadata: Metadata = {
+  title: "Ali Mengütay - Personal Website",
+  description: "Personal website",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        {/* Add any additional meta tags or links here */}
-      </Head>
-      <body className='bg-stone-900 opacity-80'>
-        {children}
+      <body className="bg-[#212224]">
+        <div className="min-h-screen">{children}</div>
       </body>
     </html>
   );
