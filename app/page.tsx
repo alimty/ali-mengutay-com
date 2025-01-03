@@ -1,19 +1,51 @@
-import React from 'react';
-import ContactForm from './components/ContactForm';
-import Profile from './components/Profile';
-import Layout from './layout';
+import Card from "./components/Card";
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
-    <Layout>
-      <div className="bg-gray-800 backdrop-opacity-25 min-h-screen text-white">
-        <div className="container mx-auto p-8">
-          <Profile />
-          <ContactForm />
+    <main className="p-8">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Profile Card (larger size) */}
+          <Card
+            title="Hey, I'm Ali 👋"
+            subtitle="A Software Developer"
+            href="/about"
+            imagePath="/images/profile.webp"
+            className="col-span-full md:col-span-2"
+          />
+
+          <Card
+            title="See my resume"
+            subtitle="LEARN MORE ABOUT ME"
+            imagePath="/images/resume.webp"
+            href="/resume"
+          />
+          <Card
+            title="Projects"
+            subtitle="CHECK OUT MY WORK"
+            imagePath="/images/projects.webp"
+            href="/projects"
+          />
+          <Card
+            title="Blog"
+            subtitle="READ MY THOUGHTS"
+            imagePath="/images/blog.webp"
+            href="/blog"
+          />
+          <Card
+            title="Contact"
+            subtitle="LET'S TALK"
+            imagePath="/images/contact.webp"
+            href="/contact"
+          />
+          <Card
+            title="Shop"
+            subtitle="CHECK OUT MY STORE"
+            imagePath="/images/shop.webp"
+            href="/shop"
+          />
         </div>
       </div>
-    </Layout>
+    </main>
   );
-};
-
-export default Home;
+}
