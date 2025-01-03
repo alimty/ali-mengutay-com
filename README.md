@@ -1,70 +1,108 @@
+# Ali Mengütay Personal Website
 
-# 🌟 My Personal Website 🌟
+A modern, responsive personal website built with Next.js and Tailwind CSS.
 
-## 📚 Overview
+## Live Demo
 
-This is a personal website project built using Next.js and other cutting-edge web technologies.
+- Staging: [ali-mengutay-staging.vercel.app](https://ali-mengutay-q8clohdsz-alimtys-projects.vercel.app)
+- Production: [Coming soon]
 
-## 💻 Technologies Used
+## Tech Stack
 
-- 📘 Next.js
-- 🛠 TypeScript
-- 🎨 Tailwind CSS
-- 💌 Nodemailer
-- 🗃 Sanity CMS
-- 🎠 React Responsive Carousel
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- Vercel (Deployment)
 
-## 🚀 Setup and Development
+## Features
 
-### 🔧 Prerequisites
+- Responsive design with bento grid layout
+- Dark mode optimized
+- Dynamic image loading with Next.js Image
+- Custom icon components
+- Modular component architecture
 
-Make sure you have Node.js and npm installed on your local machine.
+## Pages
 
-### 📥 Installation
+- 🏠 Home
+- 👤 About
+- 📝 Resume
+- 💼 Projects
+- 📚 Blog
+- 🛍️ Shop
+- 📧 Contact
 
-1️⃣ Clone the repository to your local machine.
+## Development
+
 ```bash
-git clone <repository_url>
-```
-
-2️⃣ Navigate to the project directory.
-```bash
-cd <project_directory>
-```
-
-3️⃣ Install the dependencies.
-```bash
+# Install dependencies
 npm install
-```
 
-### 🛠 Running the Development Server
-
-1️⃣ Run the following command to start the development server.
-```bash
+# Run development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-2️⃣ Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see the application.
+## Deployment
 
-## 🌐 API Routes
+The site is deployed on Vercel with automatic deployments:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as API routes rather than React pages. You can edit the API endpoints in the `pages/api` directory.
+- Push to `main` branch deploys to production
+- Push to other branches creates preview deployments
 
-## 🚢 Deployment
-
-To deploy the application, run the following build command.
+### Deployment Steps
 
 ```bash
-npm run build
+# 1. Switch to main branch
+git checkout main
+
+# 2. Merge staging changes
+git merge staging
+
+# 3. Push to production
+git push origin main
+
+# 4. Deploy on Vercel
+vercel --prod
 ```
 
-### 🌐 Vercel Deployment
+### Quick Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+```bash
+# Deploy to staging
+vercel
 
-For more detailed deployment instructions, check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
+# Deploy to production
+vercel --prod
+```
 
-## 📚 Additional Resources
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - Comprehensive guide on Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - An interactive tutorial on Next.js.
+```
+├── app/
+│   ├── components/
+│   │   ├── Card.tsx
+│   │   ├── PageLayout.tsx
+│   │   └── icons/
+│   ├── about/
+│   ├── blog/
+│   ├── contact/
+│   ├── projects/
+│   ├── resume/
+│   ├── shop/
+│   └── page.tsx
+├── public/
+│   └── images/
+└── package.json
+```
+
+## Author
+
+Ali Mengütay
+- Software Developer
+- Former Mechanical Engineer
