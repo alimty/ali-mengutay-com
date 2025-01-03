@@ -9,6 +9,7 @@ interface CardProps {
   imagePath?: string;
   href: string;
   className?: string;
+  children?: React.ReactNode;
 }
 
 export default function Card({
@@ -18,6 +19,7 @@ export default function Card({
   imagePath,
   href,
   className = "",
+  children,
 }: CardProps) {
   return (
     <Link href={href}>
@@ -52,6 +54,7 @@ export default function Card({
 
         <h2 className="text-2xl font-bold text-white mb-2">{title}</h2>
         <p className="text-[#888888] mb-4">{subtitle}</p>
+        {children}
 
         <div className="absolute bottom-6 right-6">
           <div

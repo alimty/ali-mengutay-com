@@ -81,7 +81,7 @@ export default function Resume() {
         >
           <div className="mt-4 text-gray-300">
             <h3 className="text-white font-semibold">Mechanical Engineering</h3>
-            <p className="text-sm text-gray-400">Bachelor's Degree</p>
+            <p className="text-sm text-gray-400">Bachelor&apos;s Degree</p>
             <p className="mt-2 text-sm">
               Transitioned from mechanical engineering to software development,
               bringing analytical and problem-solving skills to web development.
