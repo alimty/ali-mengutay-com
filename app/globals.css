@@ -1,10 +1,7 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-/* not working */
-/* 
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
-*/
+@tailwind utilities;
+
+body {
+  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
+}
