@@ -9,10 +9,6 @@ const nextConfig = {
     ],
   },
   reactStrictMode: true,
-  compiler: {
-    // Suppress the warning about cz-shortcut-listen
-    ignoreDuringBuilds: true,
-  },
 };
 
 module.exports = nextConfig;
