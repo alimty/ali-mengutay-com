@@ -14,7 +14,7 @@ export default function Projects() {
     <PageLayout title="Projects">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card
-          title="Project 1"
+          title="Note on browser tab"
           subtitle="A COOL WEB APP"
           href="/projects/project1"
           imagePath={projectImages[0]}

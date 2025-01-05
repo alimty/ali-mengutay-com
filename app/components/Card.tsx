@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowIcon } from "./icons/ArrowIcon";
 
 interface CardProps {
-  title: string;
+  title: string | React.ReactNode;
   subtitle: string;
   icon?: string;
   imagePath?: string;
@@ -24,6 +24,7 @@ export default function Card({
   return (
     <Link href={href}>
       <div
+        role="article"
         className={`
           relative p-6 rounded-3xl 
           bg-[#333639] hover:bg-[#3c3f42]
@@ -39,8 +40,9 @@ export default function Card({
             <div className="relative w-full rounded-2xl overflow-hidden aspect-[16/9]">
               <Image
                 src={imagePath}
-                alt={title}
+                alt={typeof title === "string" ? title : "Card image"}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 style={{ objectFit: "cover" }}
                 className="transition-transform duration-500 group-hover:scale-105"
                 priority
