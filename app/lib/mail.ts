@@ -9,6 +9,7 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function sendEmail(from: string, message: string) {
+  console.log('Checking env:', !!process.env.GMAIL_USER, !!process.env.GMAIL_APP_PASSWORD);
   await transporter.sendMail({
     from: `${from} -- ali.mengutay.com <${process.env.GMAIL_USER}>`,
     to: process.env.GMAIL_USER,
