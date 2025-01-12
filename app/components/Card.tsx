@@ -67,6 +67,7 @@ export default function Card({
             flex items-center justify-center
             group-hover:border-[rgb(241,180,62)]
             transition-all duration-500 ease-out
+            z-10
           "
           >
             <ArrowIcon className="w-5 h-5 text-white group-hover:text-[rgb(241,180,62)]" />

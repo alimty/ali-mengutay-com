@@ -5,3 +5,16 @@
 body {
   @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
 }
+
+/* Add custom prose styles */
+.prose {
+  @apply text-gray-300;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply text-white font-bold;
+}
+
+.prose ul {
+  @apply text-gray-300 list-disc;
+}
