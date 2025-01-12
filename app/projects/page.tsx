@@ -14,12 +14,17 @@ export default function Projects() {
     <PageLayout title="Projects">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card
-          title="Note on browser tab"
-          subtitle="A COOL WEB APP"
-          href="/projects/project1"
+          title="Noto"
+          subtitle="MINIMALIST NOTE TAKING APP"
+          href="/projects/noto"
           imagePath={projectImages[0]}
-          className="col-span-full" // Featured project spans full width
-        />
+          className="col-span-full"
+        >
+          <p className="text-gray-300 mt-2">
+            A clean, distraction-free note-taking web app with cross-browser
+            local storage. Pure simplicity: just you and your thoughts.
+          </p>
+        </Card>
         <Card
           title="Project 2"
           subtitle="MOBILE APPLICATION"

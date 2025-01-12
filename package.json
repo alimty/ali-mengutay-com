@@ -12,12 +12,13 @@
   },
   "dependencies": {
     "@types/nodemailer": "^6.4.17",
-    "next": "^14.0.4",
+    "next": "^15.1.4",
     "nodemailer": "^6.9.16",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^20.7.1",
     "@types/react": "^18.2.23",
     "autoprefixer": "^10.4.16",
