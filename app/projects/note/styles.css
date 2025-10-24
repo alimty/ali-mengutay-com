@@ -1,0 +1,168 @@
+/* Tiptap Editor Zen Styles */
+
+/* Base editor styling */
+.ProseMirror {
+  background-color: #212224 !important;
+  color: white !important;
+  min-height: 100vh;
+  outline: none;
+  border: none;
+}
+
+/* Placeholder styling */
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: rgba(255, 255, 255, 0.3);
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Heading styles */
+.ProseMirror h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: white;
+}
+
+.ProseMirror h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  color: white;
+}
+
+.ProseMirror h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  color: white;
+}
+
+/* Paragraph styling */
+.ProseMirror p {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Bold and italic */
+.ProseMirror strong {
+  font-weight: bold;
+  color: white;
+}
+
+.ProseMirror em {
+  font-style: italic;
+  color: white;
+}
+
+/* Code styling */
+.ProseMirror code {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #F1B43E;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.ProseMirror pre {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.ProseMirror pre code {
+  background: none;
+  color: white;
+  padding: 0;
+  font-size: 0.875rem;
+  display: block;
+}
+
+/* Blockquote styling */
+.ProseMirror blockquote {
+  border-left: 4px solid rgba(255, 255, 255, 0.3);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+/* List styling */
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+  color: white;
+}
+
+.ProseMirror li {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.ProseMirror li p {
+  margin-bottom: 0.25rem;
+}
+
+/* Link styling */
+.ProseMirror a {
+  color: #F1B43E;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ProseMirror a:hover {
+  opacity: 0.8;
+}
+
+/* Horizontal rule */
+.ProseMirror hr {
+  border: none;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 2rem 0;
+}
+
+/* Scrollbar styling */
+.ProseMirror::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ProseMirror::-webkit-scrollbar-track {
+  background: #212224;
+}
+
+.ProseMirror::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.ProseMirror::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Selection color */
+.ProseMirror ::selection {
+  background-color: rgba(241, 180, 62, 0.3);
+}
+
+/* Remove default tailwind prose overrides if needed */
+.prose-invert {
+  --tw-prose-body: white;
+  --tw-prose-headings: white;
+  --tw-prose-bold: white;
+  --tw-prose-links: #F1B43E;
+  --tw-prose-code: #F1B43E;
+  --tw-prose-quotes: rgba(255, 255, 255, 0.7);
+}

@@ -18,17 +18,7 @@ export default function About() {
           className="col-span-full md:col-span-2"
           imagePath="/images/profile.webp"
         >
-          <p className="text-gray-300 mt-2">
-            Software Engineer at{" "}
-            <a
-              href="https://www.pix4d.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#FFC148] hover:underline"
-            >
-              Pix4D
-            </a>
-          </p>
+          <p className="text-gray-300 mt-2">Software Engineer at Pix4D</p>
         </Card>
 
         {/* Family Cards */}

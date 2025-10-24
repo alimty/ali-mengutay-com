@@ -15,6 +15,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "@tiptap/extension-placeholder": "^3.8.0",
+    "@tiptap/react": "^3.8.0",
+    "@tiptap/starter-kit": "^3.8.0",
     "@types/nodemailer": "^6.4.17",
     "next": "^14.0.4",
     "nodemailer": "^6.9.16",
