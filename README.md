@@ -10,12 +10,12 @@ A modern, responsive personal website built with Next.js 14, TypeScript, and Tai
 ## 📜 Scripts
 
 ```bash
-npm run dev      # Development server
-npm run build    # Production build
-npm start        # Production server
-npm run lint     # ESLint check
-npm run stop     # Kill port 3000
-npm run restart  # Restart dev server
+npm run dev        # Start development server
+npm run build      # Build for production
+npm start          # Start production server
+npm run lint       # Run ESLint
+npm run stop       # Kill port 3000
+npm run restart    # Restart dev server
 ```
 
 ## 📁 Project Structure
@@ -29,6 +29,11 @@ app/
 ├── contact/            # Contact page
 ├── lib/mail.ts         # Email utility
 ├── projects/           # Projects page
+│   ├── note/           # Note taking app
+│   │   ├── components/ # Markdown editor
+│   │   ├── hooks/      # Local storage hook
+│   │   └── page.tsx    # Note app page
+│   └── page.tsx        # Projects listing
 ├── resume/             # Resume page
 ├── shop/               # Shop page
 ├── layout.tsx          # Root layout
