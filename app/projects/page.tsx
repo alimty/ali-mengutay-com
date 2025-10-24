@@ -16,7 +16,7 @@ export default function Projects() {
         <Card
           title="Note on browser tab"
           subtitle="A COOL WEB APP"
-          href="/projects/project1"
+          href="/projects/note"
           imagePath={projectImages[0]}
           className="col-span-full" // Featured project spans full width
         />

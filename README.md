@@ -7,58 +7,6 @@ A modern, responsive personal website built with Next.js 14, TypeScript, and Tai
 - **Production**: [https://www.ali.mengutay.com](https://www.ali.mengutay.com)
 - **Staging**: [ali-mengutay-staging.vercel.app](https://ali-mengutay-q8clohdsz-alimtys-projects.vercel.app)
 
-## Tech Stack
-
-- Next.js 14 (App Router)
-- TypeScript
-- Tailwind CSS
-- Nodemailer (Contact form)
-- Vercel
-
-## 🏁 Run Locally
-
-### Prerequisites
-- Node.js v22.13.0 or higher
-- npm v10.0.0 or higher
-- nvm (recommended)
-
-### Quick Start
-
-```bash
-# 1. Switch to Node 22
-nvm use
-
-# 2. Install dependencies
-npm install
-
-# 3. Create environment file
-cp .env.local.example .env.local
-# Then edit .env.local with your Gmail credentials
-
-# 4. Start development server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000)
-
-### Environment Setup
-
-Create `.env.local` file:
-
-```bash
-GMAIL_USER=your-email@gmail.com
-GMAIL_APP_PASSWORD=your-app-password
-```
-
-**Get Gmail App Password:**
-1. Go to [Google Account Security](https://myaccount.google.com/security)
-2. Enable 2-Step Verification
-3. Go to [App Passwords](https://myaccount.google.com/apppasswords) 
-4. Generate password for "Mail"
-5. Copy 16-character code to `.env.local`
-
-**Note**: Contact form won't work without these credentials.
-
 ## 📜 Scripts
 
 ```bash
@@ -89,6 +37,47 @@ app/
 public/images/          # Static images
 ```
 
+### Prerequisites
+- Node.js v22.13.0 or higher
+- npm v10.0.0 or higher
+- nvm (recommended)
+
+### Quick Start
+
+```bash
+# 1. Switch to Node 22
+nvm use
+# 2. Install dependencies
+npm install
+# 3. Create environment file
+cp .env.local
+# Then edit .env.local with your Gmail credentials
+# 4. Start development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000)
+
+### Environment Setup
+
+Create `.env.local` file:
+
+```bash
+GMAIL_USER=your-email@gmail.com
+GMAIL_APP_PASSWORD=your-app-password
+```
+
+**Get Gmail App Password:**
+1. Go to [Google Account Security](https://myaccount.google.com/security)
+2. Enable 2-Step Verification
+3. Go to [App Passwords](https://myaccount.google.com/apppasswords) 
+4. Generate password for "Mail"
+5. Copy 16-character code to `.env.local`
+
+**Note**: Contact form won't work without these credentials.
+
+
+
 ## 📄 Pages
 
 - **Home** (`/`) - Landing page with navigation cards
@@ -99,38 +88,6 @@ public/images/          # Static images
 - **Shop** (`/shop`) - Digital products
 - **Contact** (`/contact`) - Contact form
 
-## 🚢 Deploy to Vercel
-
-### Environment Variables
-Add to Vercel Dashboard → Settings → Environment Variables:
-```
-GMAIL_USER=your-email@gmail.com
-GMAIL_APP_PASSWORD=your-app-password
-```
-
-### Via CLI
-```bash
-vercel --prod
-```
-
-### Via Git
-```bash
-git push origin main  # Auto-deploys to production
-```
-
-## 🐛 Troubleshooting
-
-### Port 3000 in use
-```bash
-npm run stop
-```
-
-### Contact form not working
-- Check `.env.local` exists with correct credentials
-- Use App Password, not regular Gmail password
-- Restart dev server after creating `.env.local`
-
-### Module errors
 ```bash
 rm -rf node_modules package-lock.json
 npm install
@@ -144,17 +101,6 @@ nvm use 22.13.0
 ## 🔄 Development Workflow
 
 ```bash
-# Work on feature branch
-git checkout -b feature/your-feature
-git add .
-git commit -m "Your message"
-git push origin feature/your-feature
-
-# Merge to staging for testing
-git checkout staging
-git merge feature/your-feature
-git push origin staging
-
 # Deploy to production
 git checkout main
 git merge staging
