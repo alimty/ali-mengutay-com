@@ -5,7 +5,7 @@ A modern, responsive personal website built with Next.js 14, TypeScript, and Tai
 ## 🚀 Live Site
 
 - **Production**: [https://www.ali.mengutay.com](https://www.ali.mengutay.com)
-- **Staging**: [ali-mengutay-staging.vercel.app](https://ali-mengutay-q8clohdsz-alimtys-projects.vercel.app)
+- **Staging**: [ali-mengutay-staging-preview](https://ali-mengutay-com-git-staging-alimtys-projects.vercel.app/)
 
 ## 📜 Scripts
 
