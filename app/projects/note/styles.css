@@ -1,20 +1,18 @@
-/* Tiptap Editor - Google Keep / VS Code Inspired Styles */
+/* ============================================
+   NOTE EDITOR
+   ============================================ */
 
-/* Note Editor Wrapper */
 .note-editor-wrapper {
   height: 100vh;
   background: linear-gradient(135deg, #1a1a1a 0%, #212224 100%);
   overflow: auto;
   scroll-behavior: smooth;
-  
-  /* Override base body styles - make note app independent */
   font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
   font-size: 1.5rem !important;
   line-height: 1.8 !important;
   color: #e4e4e4 !important;
 }
 
-/* Markdown Editor Container */
 .markdown-editor {
   min-height: 100vh;
   font-size: 1.5rem !important;
@@ -23,7 +21,6 @@
   font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
 }
 
-/* Base editor styling - VS Code / Google Keep inspired */
 .ProseMirror {
   color: #e4e4e4 !important;
   min-height: 100vh;
@@ -32,27 +29,21 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
-  
-  /* Distinct serif font for writing - bigger and different from website */
   font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
   font-size: 1.5rem !important;
   line-height: 1.8;
   letter-spacing: 0.01em;
-  
-  /* Better text rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Responsive padding for larger screens */
 @media (min-width: 768px) {
   .ProseMirror {
     padding: 4rem 3rem;
   }
 }
 
-/* Enhanced Placeholder - Google Keep style */
 .ProseMirror p.is-editor-empty:first-child::before {
   color: rgba(255, 255, 255, 0.4);
   content: attr(data-placeholder);
@@ -63,7 +54,9 @@
   font-size: 1.5rem !important;
 }
 
-/* Enhanced Heading Styles - VS Code inspired */
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
 .ProseMirror h1 {
   font-size: 3.5rem !important;
   font-weight: 700;
@@ -98,16 +91,18 @@
   font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
 }
 
-/* Enhanced Paragraph - Google Keep style */
 .ProseMirror p {
-  margin-bottom: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
   color: rgba(255, 255, 255, 0.95);
   font-size: 1.5rem !important;
   line-height: 1.8;
   font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
 }
 
-/* Bold and italic */
+.ProseMirror p:first-child {
+  margin-top: 0;
+}
 .ProseMirror strong {
   font-weight: bold;
   color: white;
@@ -118,7 +113,10 @@
   color: white;
 }
 
-/* Enhanced Code Blocks - VS Code style */
+/* ============================================
+   CODE BLOCKS
+   ============================================ */
+
 .ProseMirror code {
   background-color: rgba(255, 255, 255, 0.15);
   color: #FFC148;
@@ -138,6 +136,11 @@
   overflow-x: auto;
   margin: 1.5rem 0;
   box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+  -webkit-user-select: text;
+  user-select: text;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ProseMirror pre code {
@@ -149,7 +152,10 @@
   line-height: 1.6;
 }
 
-/* Enhanced Blockquote - Google Keep style */
+/* ============================================
+   BLOCKQUOTE
+   ============================================ */
+
 .ProseMirror blockquote {
   border-left: 4px solid rgba(255, 193, 72, 0.5);
   padding-left: 1.5rem;
@@ -161,24 +167,35 @@
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
-/* List styling */
+/* ============================================
+   LISTS
+   ============================================ */
 .ProseMirror ul,
 .ProseMirror ol {
   padding-left: 1.5rem;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   color: white;
 }
 
 .ProseMirror li {
-  margin-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.25rem;
   color: white;
 }
 
-.ProseMirror li p {
-  margin-bottom: 0.25rem;
+.ProseMirror li:first-child {
+  margin-top: 0;
 }
 
-/* Enhanced Links - VS Code style */
+.ProseMirror li p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+
 .ProseMirror a {
   color: #FFC148;
   text-decoration: none;
@@ -191,14 +208,19 @@
   border-bottom-color: #FFD577;
 }
 
-/* Horizontal rule */
+/* ============================================
+   HORIZONTAL RULE
+   ============================================ */
+
 .ProseMirror hr {
   border: none;
   border-top: 2px solid rgba(255, 255, 255, 0.2);
   margin: 2rem 0;
 }
 
-/* Scrollbar styling */
+/* ============================================
+   SCROLLBAR
+   ============================================ */
 .ProseMirror::-webkit-scrollbar {
   width: 8px;
 }
@@ -216,7 +238,10 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* Enhanced Selection - VS Code style */
+/* ============================================
+   SELECTION
+   ============================================ */
+
 .ProseMirror ::selection {
   background-color: rgba(255, 193, 72, 0.4);
   color: #ffffff;
