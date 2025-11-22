@@ -1,6 +1,6 @@
 # Ali Mengütay Personal Website
 
-A modern, responsive personal website built with Next.js 14, TypeScript, and Tailwind CSS.
+A personal website and medium to connect with others. A personal project showcasing work, thoughts, and contact information.
 
 ## 🚀 Live Site
 
@@ -23,19 +23,28 @@ npm run restart    # Restart dev server
 ```
 app/
 ├── about/              # About page
-├── api/send-email/     # Contact form API
+├── api/contact/        # Contact form API
 ├── blog/               # Blog page
 ├── components/         # Reusable components
 ├── contact/            # Contact page
-├── lib/mail.ts         # Email utility
+├── lib/
+│   ├── telegram.ts    # Telegram messaging
+│   └── rateLimit.ts   # Rate limiting
 ├── projects/           # Projects page
 │   ├── note/           # Note taking app
 │   │   ├── components/ # Markdown editor
 │   │   ├── hooks/      # Local storage hook
-│   │   └── page.tsx    # Note app page
+│   │   ├── layout.tsx  # Note app layout
+│   │   ├── page.tsx    # Note app page
+│   │   └── styles.css  # Note app styles
 │   └── page.tsx        # Projects listing
 ├── resume/             # Resume page
 ├── shop/               # Shop page
+├── styles/             # Global styles
+│   ├── base.css        # Base/reset styles
+│   ├── components.css  # Component styles
+│   ├── utilities.css   # Utility classes
+│   └── variables.css   # CSS variables
 ├── layout.tsx          # Root layout
 └── page.tsx            # Home page
 
@@ -56,7 +65,7 @@ nvm use
 npm install
 # 3. Create environment file
 cp .env.local
-# Then edit .env.local with your Gmail credentials
+# Then edit .env.local with your Telegram credentials
 # 4. Start development server
 npm run dev
 ```
@@ -68,16 +77,11 @@ Open [http://localhost:3000](http://localhost:3000)
 Create `.env.local` file:
 
 ```bash
-GMAIL_USER=your-email@gmail.com
-GMAIL_APP_PASSWORD=your-app-password
+TELEGRAM_BOT_TOKEN=your-bot-token
+TELEGRAM_CHAT_ID=your-chat-id
 ```
 
-**Get Gmail App Password:**
-1. Go to [Google Account Security](https://myaccount.google.com/security)
-2. Enable 2-Step Verification
-3. Go to [App Passwords](https://myaccount.google.com/apppasswords) 
-4. Generate password for "Mail"
-5. Copy 16-character code to `.env.local`
+**Get Telegram Bot Token and Chat ID:** Search for `@BotFather` on Telegram, create a bot, and get your chat ID from the API.
 
 **Note**: Contact form won't work without these credentials.
 

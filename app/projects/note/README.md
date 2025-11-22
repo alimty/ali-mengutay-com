@@ -49,6 +49,7 @@ A minimalist, Notion-style note-taking app that runs entirely in your browser. N
 ```
 /app/projects/note/
 ├── page.tsx                    # Main entry point
+├── layout.tsx                  # Note app layout (metadata)
 ├── components/
 │   └── MarkdownEditor.tsx      # Tiptap editor wrapper
 ├── hooks/
