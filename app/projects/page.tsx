@@ -12,13 +12,13 @@ const projectImages = [
 export default function Projects() {
   return (
     <PageLayout title="Projects">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid--2-col">
         <Card
           title="Note on browser tab"
           subtitle="A COOL WEB APP"
           href="/projects/note"
           imagePath={projectImages[0]}
-          className="col-span-full" // Featured project spans full width
+          className="card--full-width"
         />
         <Card
           title="Project 2"

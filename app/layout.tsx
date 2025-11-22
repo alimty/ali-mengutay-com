@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ali Mengütay - Personal Website",
-  description: "Personal website",
+  title: "Ali Mengütay",
+  description: "Software Engineer and former Mechanical Engineer.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -20,10 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="bg-[#212224]" suppressHydrationWarning>
-        <div className="min-h-screen">{children}</div>
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }

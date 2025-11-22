@@ -12,14 +12,14 @@ const shopImages = [
 export default function Shop() {
   return (
     <PageLayout title="Shop">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid--3-col">
         {/* Featured Product */}
         <Card
           title="Premium Course Bundle"
           subtitle="FEATURED • $99"
           href="/shop/premium-bundle"
           imagePath={shopImages[0]}
-          className="col-span-full md:col-span-2"
+          className="card--featured"
         />
 
         {/* Regular Products */}
