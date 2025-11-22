@@ -1,55 +1,110 @@
-/* Tiptap Editor Zen Styles */
+/* Tiptap Editor - Google Keep / VS Code Inspired Styles */
 
-/* Base editor styling */
+/* Note Editor Wrapper */
+.note-editor-wrapper {
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #212224 100%);
+  overflow: auto;
+  scroll-behavior: smooth;
+  
+  /* Override base body styles - make note app independent */
+  font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
+  font-size: 1.5rem !important;
+  line-height: 1.8 !important;
+  color: #e4e4e4 !important;
+}
+
+/* Markdown Editor Container */
+.markdown-editor {
+  min-height: 100vh;
+  font-size: 1.5rem !important;
+  line-height: 1.8;
+  outline: none;
+  font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
+}
+
+/* Base editor styling - VS Code / Google Keep inspired */
 .ProseMirror {
-  background-color: #212224 !important;
-  color: white !important;
+  color: #e4e4e4 !important;
   min-height: 100vh;
   outline: none;
   border: none;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  
+  /* Distinct serif font for writing - bigger and different from website */
+  font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
+  font-size: 1.5rem !important;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  
+  /* Better text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Placeholder styling */
+/* Responsive padding for larger screens */
+@media (min-width: 768px) {
+  .ProseMirror {
+    padding: 4rem 3rem;
+  }
+}
+
+/* Enhanced Placeholder - Google Keep style */
 .ProseMirror p.is-editor-empty:first-child::before {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.4);
   content: attr(data-placeholder);
   float: left;
   height: 0;
   pointer-events: none;
+  font-style: italic;
+  font-size: 1.5rem !important;
 }
 
-/* Heading styles */
+/* Enhanced Heading Styles - VS Code inspired */
 .ProseMirror h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  font-size: 3.5rem !important;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
   line-height: 1.2;
-  color: white;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
 }
 
 .ProseMirror h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: 1.75rem;
-  margin-bottom: 0.75rem;
+  font-size: 2.75rem !important;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.3;
-  color: white;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
 }
 
 .ProseMirror h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem !important;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
   line-height: 1.4;
-  color: white;
+  color: #ffffff;
+  font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
 }
 
-/* Paragraph styling */
+/* Enhanced Paragraph - Google Keep style */
 .ProseMirror p {
-  margin-bottom: 1rem;
-  color: white;
+  margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.5rem !important;
+  line-height: 1.8;
+  font-family: 'Georgia', 'Times New Roman', 'Merriweather', 'Lora', serif !important;
 }
 
 /* Bold and italic */
@@ -63,40 +118,47 @@
   color: white;
 }
 
-/* Code styling */
+/* Enhanced Code Blocks - VS Code style */
 .ProseMirror code {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #F1B43E;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  font-family: 'Courier New', monospace;
-  font-size: 0.9em;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #FFC148;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.375rem;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code',
+               'Courier New', monospace;
+  font-size: 1.1em !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .ProseMirror pre {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.5rem;
-  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
   overflow-x: auto;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .ProseMirror pre code {
   background: none;
-  color: white;
+  color: #e4e4e4;
   padding: 0;
-  font-size: 0.875rem;
+  font-size: 1.125rem !important;
   display: block;
+  line-height: 1.6;
 }
 
-/* Blockquote styling */
+/* Enhanced Blockquote - Google Keep style */
 .ProseMirror blockquote {
-  border-left: 4px solid rgba(255, 255, 255, 0.3);
-  padding-left: 1rem;
-  margin: 1.5rem 0;
-  color: rgba(255, 255, 255, 0.7);
+  border-left: 4px solid rgba(255, 193, 72, 0.5);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: rgba(255, 255, 255, 0.8);
   font-style: italic;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1rem 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 /* List styling */
@@ -116,15 +178,17 @@
   margin-bottom: 0.25rem;
 }
 
-/* Link styling */
+/* Enhanced Links - VS Code style */
 .ProseMirror a {
-  color: #F1B43E;
-  text-decoration: underline;
-  cursor: pointer;
+  color: #FFC148;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 193, 72, 0.3);
+  transition: all 0.2s ease;
 }
 
 .ProseMirror a:hover {
-  opacity: 0.8;
+  color: #FFD577;
+  border-bottom-color: #FFD577;
 }
 
 /* Horizontal rule */
@@ -152,17 +216,9 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* Selection color */
+/* Enhanced Selection - VS Code style */
 .ProseMirror ::selection {
-  background-color: rgba(241, 180, 62, 0.3);
+  background-color: rgba(255, 193, 72, 0.4);
+  color: #ffffff;
 }
 
-/* Remove default tailwind prose overrides if needed */
-.prose-invert {
-  --tw-prose-body: white;
-  --tw-prose-headings: white;
-  --tw-prose-bold: white;
-  --tw-prose-links: #F1B43E;
-  --tw-prose-code: #F1B43E;
-  --tw-prose-quotes: rgba(255, 255, 255, 0.7);
-}

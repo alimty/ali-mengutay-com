@@ -11,31 +11,31 @@ const resumeImages = [
 export default function Resume() {
   return (
     <PageLayout title="Resume">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid--2-col grid--gap-6">
         {/* Experience Section - Full Width */}
         <Card
           title="Experience"
           subtitle="CAREER JOURNEY"
           href="#"
           imagePath={resumeImages[0]}
-          className="col-span-full"
+          className="card--full-width"
         >
-          <div className="mt-4 space-y-4 text-gray-300">
-            <div>
-              <h3 className="text-white font-semibold">Software Developer</h3>
-              <p className="text-sm text-gray-400">2022 - Present</p>
-              <ul className="list-disc list-inside mt-2 text-sm">
+          <div className="resume-content">
+            <div className="resume-item">
+              <h3 className="resume-item__title">Software Developer</h3>
+              <p className="resume-item__meta">2022 - Present</p>
+              <ul className="resume-item__list">
                 <li>
                   Developing web applications using Python Django and Next.js
                 </li>
                 <li>Building RESTful APIs and integrating with frontend</li>
-                <li>Implementing responsive designs with Tailwind CSS</li>
+                <li>Implementing responsive designs with modern CSS</li>
               </ul>
             </div>
-            <div>
-              <h3 className="text-white font-semibold">Mechanical Engineer</h3>
-              <p className="text-sm text-gray-400">Previous Experience</p>
-              <ul className="list-disc list-inside mt-2 text-sm">
+            <div className="resume-item">
+              <h3 className="resume-item__title">Mechanical Engineer</h3>
+              <p className="resume-item__meta">Previous Experience</p>
+              <ul className="resume-item__list">
                 <li>Designed and analyzed mechanical systems</li>
                 <li>Project management and team coordination</li>
                 <li>Transitioned to software development</li>
@@ -51,21 +51,18 @@ export default function Resume() {
           href="#"
           imagePath={resumeImages[1]}
         >
-          <div className="flex flex-wrap gap-2 mt-4">
+          <div className="skill-badge-container">
             {[
               "Python",
               "Django",
               "Next.js",
               "TypeScript",
-              "Tailwind",
+              "CSS",
               "PostgreSQL",
               "Git",
               "REST APIs",
             ].map((skill) => (
-              <span
-                key={skill}
-                className="px-3 py-1 bg-[#212224] rounded-full text-sm text-white"
-              >
+              <span key={skill} className="skill-badge">
                 {skill}
               </span>
             ))}
@@ -79,10 +76,10 @@ export default function Resume() {
           href="#"
           imagePath={resumeImages[2]}
         >
-          <div className="mt-4 text-gray-300">
-            <h3 className="text-white font-semibold">Mechanical Engineering</h3>
-            <p className="text-sm text-gray-400">Bachelor&apos;s Degree</p>
-            <p className="mt-2 text-sm">
+          <div className="resume-content">
+            <h3 className="resume-item__title">Mechanical Engineering</h3>
+            <p className="resume-item__meta">Bachelor&apos;s Degree</p>
+            <p className="resume-item__text">
               Transitioned from mechanical engineering to software development,
               bringing analytical and problem-solving skills to web development.
             </p>
@@ -92,10 +89,7 @@ export default function Resume() {
 
       {/* Download Resume Button */}
       <div className="mt-6">
-        <a
-          href="/resume.pdf"
-          className="inline-flex items-center px-6 py-3 bg-[#FFC148] text-black rounded-xl font-medium hover:bg-[#FFD577] transition-colors"
-        >
+        <a href="/resume.pdf" className="button">
           Download Resume
         </a>
       </div>

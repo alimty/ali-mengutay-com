@@ -12,14 +12,14 @@ const blogImages = [
 export default function Blog() {
   return (
     <PageLayout title="Blog">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid--3-col">
         {/* Featured Post (spans 2 columns) */}
         <Card
           title="Getting Started with Next.js 13"
           subtitle="FEATURED POST • WEB DEVELOPMENT"
           href="/blog/nextjs-13"
           imagePath={blogImages[0]}
-          className="col-span-full md:col-span-2"
+          className="card--featured"
         />
 
         {/* Regular Posts */}

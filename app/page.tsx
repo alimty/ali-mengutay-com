@@ -2,21 +2,21 @@ import Card from "./components/Card";
 
 export default function Home() {
   return (
-    <main className="p-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <main className="page-layout">
+      <div className="page-layout__container">
+        <div className="bento-grid">
           {/* Profile Card (larger size) */}
           <Card
             title={
               <span>
-                <span className="font-normal text-gray-300">Hey, I&apos;m</span>{" "}
-                <span className="font-bold">Ali</span> <span>👋</span>
+                <span className="card__title-normal">Hey, I&apos;m</span>{" "}
+                <span className="text-bold">Ali</span> <span>👋</span>
               </span>
             }
             subtitle="Software Engineer (Former Mechanical Engineer)"
             href="/about"
             imagePath="/images/profile.webp"
-            className="col-span-full md:col-span-2"
+            className="card--featured"
           />
 
           <Card

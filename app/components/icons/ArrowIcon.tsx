@@ -1,4 +1,4 @@
-export function ArrowIcon({ className = "w-6 h-6" }) {
+export function ArrowIcon({ className = "" }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

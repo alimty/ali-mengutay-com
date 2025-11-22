@@ -20,15 +20,28 @@ export function useLocalStorage<T>(
   useEffect(() => {
     try {
       const item = window.localStorage.getItem(key);
-      if (item) {
-        setStoredValue(JSON.parse(item));
+      if (item !== null) {
+        const parsed = JSON.parse(item);
+        // Check if parsed value is empty or just whitespace
+        if (typeof parsed === 'string' && parsed.trim() === '') {
+          // Empty string - use default
+          setStoredValue(initialValue);
+        } else if (parsed) {
+          setStoredValue(parsed);
+        } else {
+          setStoredValue(initialValue);
+        }
+      } else {
+        // No item in localStorage - use default
+        setStoredValue(initialValue);
       }
     } catch (error) {
       console.error('Error loading from localStorage:', error);
+      setStoredValue(initialValue);
     } finally {
       setIsLoading(false);
     }
-  }, [key]);
+  }, [key, initialValue]);
 
   // Debounced save to localStorage
   const setValue = useCallback(
